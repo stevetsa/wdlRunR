@@ -199,7 +199,7 @@ randomStrings = sapply(1:10,function(r) {paste(sample(LETTERS,10),collapse="")})
 wdlInputs = data.frame(test.hello.name=randomStrings)
 z = cromwellBatch(wdlSource = hello_wdl_sleep,workflowInputs=wdlInputs)
 # to let Cromwell get started with the jobs.
-sleep(10)
+Sys.sleep(10)
 ```
 
 At this point, checking `cromwellQuery()` will show running jobs (if done within 60 seconds, of course). Limiting to "Running" jobs is also easy.
